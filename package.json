@@ -1,0 +1,27 @@
+{
+  "name": "implement-functions",
+  "version": "1.0.0",
+  "description": "isPrime - Returns true or false, indicating whether the given number is prime.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marina8915/implement-functions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marina8915/implement-functions/issues"
+  },
+  "homepage": "https://github.com/marina8915/implement-functions#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
