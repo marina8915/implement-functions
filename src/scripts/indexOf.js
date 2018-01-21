@@ -1,5 +1,11 @@
 function indexOf(arr, el) {
-    return arr.indexOf(el)
+    var rez = arr.findIndex(function(elem, i) {
+        if (elem === el) {
+            var index = i
+        }
+        return index >= 0
+    })
+    return rez
 }
 
 console.log('indexOf')
