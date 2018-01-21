@@ -75,6 +75,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_factorial_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__scripts_factorial_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_fib_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_fib_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__scripts_fib_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js__);
+
 
 
 
@@ -146,6 +149,24 @@ console.log(fib(0))                              // 0
 console.log(fib(1))                              // 1
 console.log(fib(10))                             // 55
 console.log(fib(20))                             // 6765
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+function isSorted(array) {
+    for (var i = 1; i < array.length; i++) {
+        if (array [i-1] > array[i]){
+            return false
+        }
+    }
+    return true
+}
+
+console.log('isSorted')
+console.log(isSorted([]))                        // true
+console.log(isSorted([-Infinity, -5, 0, 3, 9]))  // true
+console.log(isSorted([3, 9, -3, 10]))            // false
 
 /***/ })
 /******/ ]);
