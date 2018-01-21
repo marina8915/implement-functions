@@ -77,8 +77,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_fib_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__scripts_fib_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reversePalindrome_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reversePalindrome_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_reversePalindrome_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_missing_js__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_missing_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__scripts_missing_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__scripts_indexOf_js__ = __webpack_require__(7);
@@ -184,7 +184,7 @@ console.log(isSorted([3, 9, -3, 10]))            // false
 function reverse(str) {
     var newStr = ''
     for (var i = str.length; i >= 0; i--) {
-        newStr += str.slice(i,i+1)
+        newStr += str.slice(i, i + 1)
     }
     return newStr
 }
@@ -192,6 +192,21 @@ function reverse(str) {
 console.log('reverse')
 console.log(reverse(''))                         // ''
 console.log(reverse('abcdef'))                   // 'fedcba'
+
+function isPalindrome(str) {
+    var newStr = str.toLowerCase().replace(/\s/g,'')
+    var reverseStr = reverse(newStr)
+    if (newStr === reverseStr) {
+        return true
+    }
+    return false
+}
+
+console.log('isPalindrome')
+console.log(isPalindrome(''))                                // true
+console.log(isPalindrome('abcdcba'))                         // true
+console.log(isPalindrome('abcd'))                            // false
+console.log(isPalindrome('A man a plan a canal Panama'))     // true
 
 /***/ }),
 /* 6 */
