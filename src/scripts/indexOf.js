@@ -1,6 +1,5 @@
 function indexOf(arr, el) {
-    var rez = arr.indexOf(el)
-    return rez
+    return arr.indexOf(el)
 }
 
 console.log('indexOf')
