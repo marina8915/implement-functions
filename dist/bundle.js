@@ -83,6 +83,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_missing_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__scripts_missing_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__scripts_indexOf_js__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__scripts_indexOf_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__scripts_indexOf_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__scripts_isBalanced_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__scripts_isBalanced_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__scripts_isBalanced_js__);
+
 
 
 
@@ -249,6 +252,31 @@ function indexOf(arr, el) {
 console.log('indexOf')
 console.log(indexOf([1, 2, 3], 1))               // 0
 console.log(indexOf([1, 2, 3], 4))               // -1
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+function isBalanced(str) {
+    var n = 0
+    var j = 0
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === '{') n++
+        if (str[i] === '}') j++
+    }
+    if (str.indexOf('{') < str.indexOf('}') && n === j) {
+        return true
+    }
+    return false
+}
+
+console.log('isBalanced')
+console.log(isBalanced('}{'))                      // false
+console.log(isBalanced('{{}'))                     // false
+console.log(isBalanced('{}{}'))                    // false
+console.log(isBalanced('foo { bar { baz } boo }')) // true
+console.log(isBalanced('foo { bar { baz }'))       // false
+console.log(isBalanced('foo { bar } }'))           // false
 
 /***/ })
 /******/ ]);
