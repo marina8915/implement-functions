@@ -69,150 +69,28 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_isPrime_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_isPrime_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scripts_isPrime_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_factorial_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_factorial_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__scripts_factorial_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_fib_js__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_fib_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__scripts_fib_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_missing_js__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_missing_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__scripts_missing_js__);
-
-
-
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_indexOf_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_indexOf_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scripts_indexOf_js__);
+//import './scripts/isPrime.js'
+//import './scripts/factorial.js'
+//import './scripts/fib.js'
+//import './scripts/isSorted.js'
+//import './scripts/reverse.js'
+//import './scripts/missing.js'
 
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-// isPrime - Returns true or false, indicating whether the given number is prime.
-function isPrime(n) {
-    var sum = 0
-    if (n <= 1) {
-        return false
-    } else {
-        for (var i = 2; i < n+1; i++) {
-                if (n % i === 0) {
-                    sum++
-                    if (n === 2) {
-                        return true
-                    }
-                }
-                if (sum > 1){
-                    return false
-                }
-        }
-        if (sum === 1) {
-            return true
-        }
-    }
-}
-console.log('isPrime')
-console.log(isPrime(0))                          // false
-console.log(isPrime(1))                          // false
-console.log(isPrime(17))                         // true
-console.log(isPrime(10000000000000))             // false
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-function factorial(n) {
-    if (n) {
-        return n * factorial(n - 1)
-    } else return 1
-}
-
-console.log('factorial')
-console.log(factorial(0))                        // 1
-console.log(factorial(1))                        // 1
-console.log(factorial(6))                        // 720
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-function fib(n) {
-    var rez = 0
-    if (n <= 1) {
-        rez = n
-    } else {
-        rez += fib(n - 1) + fib(n - 2)
-    }
+function indexOf(arr, el) {
+    var rez = arr.indexOf(el)
     return rez
 }
 
-console.log('fib')
-console.log(fib(0))                              // 0
-console.log(fib(1))                              // 1
-console.log(fib(10))                             // 55
-console.log(fib(20))                             // 6765
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-function isSorted(array) {
-    for (var i = 1; i < array.length; i++) {
-        if (array [i-1] > array[i]){
-            return false
-        }
-    }
-    return true
-}
-
-console.log('isSorted')
-console.log(isSorted([]))                        // true
-console.log(isSorted([-Infinity, -5, 0, 3, 9]))  // true
-console.log(isSorted([3, 9, -3, 10]))            // false
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-function reverse(str) {
-    var newStr = ''
-    for (var i = str.length; i >= 0; i--) {
-        newStr += str.slice(i,i+1)
-    }
-    return newStr
-}
-
-console.log('reverse')
-console.log(reverse(''))                         // ''
-console.log(reverse('abcdef'))                   // 'fedcba'
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-function missing(arr) {
-    var missingItems = []
-    arr.sort(function (a, b) {
-        return a > b
-    })
-    for (var i = 0; i < arr.length; i++) {
-        if (arr.indexOf(i + 1) === -1) {
-            missingItems.push(i + 1)
-        }
-    }
-    return missingItems
-}
-
-console.log('missing')
-console.log(missing([]))                         // undefined
-console.log(missing([1, 4, 3]))                  // 2
-console.log(missing([2, 3, 4]))                  // 1
-console.log(missing([5, 1, 4, 2]))               // 3
-console.log(missing([1, 2, 3, 4]))               // undefined
+console.log('indexOf')
+console.log(indexOf([1, 2, 3], 1))               // 0
+console.log(indexOf([1, 2, 3], 4))               // -1
 
 /***/ })
 /******/ ]);
