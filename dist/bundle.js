@@ -79,6 +79,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_missing_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_missing_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__scripts_missing_js__);
+
 
 
 
@@ -186,6 +189,30 @@ function reverse(str) {
 console.log('reverse')
 console.log(reverse(''))                         // ''
 console.log(reverse('abcdef'))                   // 'fedcba'
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+function missing(arr) {
+    var missingItems = []
+    arr.sort(function (a, b) {
+        return a > b
+    })
+    for (var i = 0; i < arr.length; i++) {
+        if (arr.indexOf(i + 1) === -1) {
+            missingItems.push(i + 1)
+        }
+    }
+    return missingItems
+}
+
+console.log('missing')
+console.log(missing([]))                         // undefined
+console.log(missing([1, 4, 3]))                  // 2
+console.log(missing([2, 3, 4]))                  // 1
+console.log(missing([5, 1, 4, 2]))               // 3
+console.log(missing([1, 2, 3, 4]))               // undefined
 
 /***/ })
 /******/ ]);
