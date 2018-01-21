@@ -264,7 +264,7 @@ function isBalanced(str) {
         if (str[i] === '{') n++
         if (str[i] === '}') j++
     }
-    if (str.indexOf('{') < str.indexOf('}') && n === j) {
+    if (str.indexOf('{') < str.indexOf('}') && n === j && str.indexOf('{}')) {
         return true
     }
     return false
