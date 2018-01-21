@@ -77,6 +77,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_fib_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__scripts_fib_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_isSorted_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_reverse_js__);
+
 
 
 
@@ -167,6 +170,22 @@ console.log('isSorted')
 console.log(isSorted([]))                        // true
 console.log(isSorted([-Infinity, -5, 0, 3, 9]))  // true
 console.log(isSorted([3, 9, -3, 10]))            // false
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+function reverse(str) {
+    var newStr = ''
+    for (var i = str.length; i >= 0; i--) {
+        newStr += str.slice(i,i+1)
+    }
+    return newStr
+}
+
+console.log('reverse')
+console.log(reverse(''))                         // ''
+console.log(reverse('abcdef'))                   // 'fedcba'
 
 /***/ })
 /******/ ]);
