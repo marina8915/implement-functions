@@ -17,3 +17,14 @@ isPalindrome - Return true or false indicating whether the given string is a pla
 missing - Takes an unsorted array of unique numbers (ie. no repeats) from 1 through some number n, and returns the missing number in the sequence (there are either no missing numbers, or exactly one missing number). Can you do it in O(N) time? Hint: There’s a clever formula you can use.
 
 isBalanced - Takes a string and returns true or false indicating whether its curly braces are balanced.
+
+#Installation
+
+Clone the repository
+npm install
+npm run start
+Open http://localhost:8080/
+
+#Building
+
+npm run build
