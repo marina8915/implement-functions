@@ -18,12 +18,17 @@ missing - Takes an unsorted array of unique numbers (ie. no repeats) from 1 thro
 
 isBalanced - Takes a string and returns true or false indicating whether its curly braces are balanced.
 
+
 #Installation
 
 Clone the repository
+
 npm install
+
 npm run start
+
 Open http://localhost:8080/
+
 
 #Building
 
