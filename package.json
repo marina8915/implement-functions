@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/marina8915/implement-functions#readme",
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
     "lodash": "^4.17.4"
